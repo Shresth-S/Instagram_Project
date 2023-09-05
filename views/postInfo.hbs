@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>meta}}
+    <link rel="stylesheet" href="/../styles/postInfo.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="outerMostContainer">
+        {{>navbar}}
+        <div class="innerContainer rightPart">
+            <div class="container postList">
+                <img class="imageurl postImage" src="{{post.imageurl}}">
+                
+                <div class="detailedInfo">
+                    <div class="upperPart">
+                        <li class="postOwner"><b>{{post.OwnerName}}</b></li>
+                        <div class="title_and_description">
+                            <div class="title"> <b>{{post.title}}</b> </div> <br>
+                            <div class="description">{{post.description}} </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bottomPart">
+                        <div class="commentSection">
+                            {{#each post.comments as |comment| }}
+                            <div class="commentItem">
+                                {{comment}}
+                            </div>
+                            {{/each}}
+                        </div>
+
+                        <div class="likesAndInfo">
+                            ❤️<button class="likes" id="{{post._id}}">{{post.likes}}</button>
+                            <span class="commentButton">💬 </span>
+                            <div class="addCommentContainer">
+                                <input type="text" class="inputField comment" placeholder="Add a Comment">
+                                <button class="addCommentButton" id="{{post._id}}">Comment</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/posts.js"></script>
+</body>
+
+</html>

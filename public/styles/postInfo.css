@@ -1,0 +1,175 @@
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+.container{
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    /* margin: 15px 37px 0px 90px; */
+    /* height: 70vh;
+    width: 50vh; */
+    width: 960px;
+    margin: 20px 100px 0px 85px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.detailedInfo{
+    padding: 10px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.postImage{
+    width: 550px;
+    height: 540px;
+    /* border-right: 2px solid lightgray; */
+}
+
+.likes{
+    margin: 0px 4px 2px 0px;
+    margin-right: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.comment{
+    padding: 0px 1px;
+    cursor: pointer;
+}
+
+.commentButton{
+    border: .7px solid lightgray; 
+    border-radius:5px;
+    padding: 1px 1px 2px 1px;
+}
+
+.addCommentContainer{
+    display: flex;
+    align-items: center;
+    margin: 5px 2px 2px 2px;
+}
+
+.inputField{
+    border-radius: 5px;
+    padding: 7px 66px 6px 20px;
+    /* margin: 5px 2px 2px 2px; */
+    cursor: auto;
+    border: .8px solid lightgray;
+    outline-width: 0;
+}
+
+
+.addCommentButton{
+    cursor: pointer;
+    margin: 2px 2px 2px 8px;
+    background-color: #3897f0;
+    border: 1px solid #3897f0;
+    border-radius: 7px;
+    padding: 7px 15px;
+    color: #fff;
+}
+
+.commentSection{
+    margin: 2px 2px;
+    margin-bottom: 0px;
+    margin-right: 1px;
+    /* border: 1px solid red; */
+    max-height: 280px;
+    /* overflow-y:auto; */
+    overflow-x:hidden;
+    border: .7px solid lightgray;
+    border-bottom: 0cm;
+    padding-bottom: 2px;
+}
+
+.commentItem{
+    border: .8px solid lightgray;
+    border-radius: 4px;
+    margin: 0px 5px 1.5px 3px;
+    overflow-wrap: break-word;
+}
+
+.commentButton{
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+/* addedd startedr */
+
+.outerMostContainer{
+    display: flex;
+    width: 99%;
+}
+
+/* .container{
+    display: flex;
+    flex-wrap: wrap;
+} */
+
+.rightPart{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0px 37px 0px 102px;
+    /* margin: 0px 37px 0px 200px; */
+    /* width: 70.5%; */
+    width: 82.5%;
+    padding: 5px;
+    height: auto;
+    min-height: 95vh;
+}
+
+li{
+    list-style: none;
+}
+
+.likesAndInfo{
+    margin: 0px 0px 1px 2px;
+    border: .7px solid lightgray;
+    /* border-radius: 5px; */
+    padding: 2px 5px;
+}
+
+
+.likes{
+    margin: 0px 4px 2px 0px;
+    margin-right: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.infoButton{
+    padding: 1px 4px;
+    text-decoration: none;
+}
+
+.commentButton{
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.postOwner{
+    width: 399.5px;
+    border: .7px solid lightgray;
+    padding: 5px;
+    border-top: 0cm;
+    list-style-type: circle;
+}
+
+.title_and_description{
+    padding: 10px;
+}

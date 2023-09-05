@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto",sans-serif;
+    height: 100%;
+}
+
+.statement{
+    color: rgb(146 142 142);
+    font-size: 17px;
+    font-weight: 550;
+    line-height: 25px;
+    margin: 0 20px 10px 20px;
+    text-align: center;
+}
+
+.msg{
+    text-align: center;
+    color: red;
+}
+
+.outerMostContainer{
+    margin: 12px 602px 0px 583px;
+}
+
+.formContainer{
+    border: .8px solid lightgray;
+}
+
+.instagramLogo {
+    width: 197px;
+
+}
+
+.instagram{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.signupContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.inputField{
+    border-radius: 5px;
+    padding: 7px 66px 7px 20px;
+    margin: 5px 2px 1px 2px;
+    border: .8px solid lightgray;
+    outline-width: 0;
+}
+
+.signupButton{
+    cursor: pointer;
+    margin: 10px 2px 100px 2px;
+    background-color: #3897f0;
+    border: 1px solid #3897f0;
+    border-radius: 7px;
+    padding: 7px 102px;
+    color: #fff;
+}
+
+@media(min-width:1320px) and (max-width:1482px){
+    .outerMostContainer{
+        margin: 12px 500px 0px 500px;
+    }
+}
+
+@media(min-width:1202px) and (max-width:1320px){
+    .outerMostContainer{
+        margin: 12px 450px 0px 450px;
+    }
+}
+
+@media(min-width:1061px) and (max-width:1202px){
+    .outerMostContainer{
+        margin: 12px 400px 0px 400px;
+    }
+}
+
+
+@media(min-width:890px) and (max-width:1061px){
+    .outerMostContainer{
+        margin: 12px 320px;
+    }
+}
+
+@media(min-width:500px) and (max-width:890px){
+    .outerMostContainer{
+        margin: auto;
+    }
+}
+
+@media(max-width:500px){
+    .outerMostContainer{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }    
+}

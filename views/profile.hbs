@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>meta}}
+    <link rel="stylesheet" href="/../styles/users.css">
+</head>
+<body>
+    <div class="outerMostContainer">
+        {{>navbar}}
+        <div class="rightPart">
+            <ul class="usersList">
+                <li class="user">
+                    <div class="userDetails">
+                        <div> <strong> {{user.username}} </strong></div> <br>
+                        <span>Followers: <b>{{user.followers}} </b> </span>
+                        <span>Following: <b>{{user.following}} </b> </span>
+                        <span>Posts: <b> {{user.postCount}} </b></span>
+                        <div class="accountSettings">
+                            <div class="privateAccountbtn"><a class="privateAccountlink" href="/api/privateAccount">Private Account</a></div>
+                            <div class="publicAccountbtn"><a class="publicAccountlink" href="/api/publicAccount">Public Account</a></div>
+                        </div>
+                    </div>
+                </li>
+                <br>
+            </ul>
+            <div class="msg">
+                <small class="msgtext">{{msg}}</small>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

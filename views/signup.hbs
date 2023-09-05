@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/../styles/signup.css">
+</head>
+<body>
+    <div class="outerMostContainer">
+        <div class="formContainer ">
+            <div class="instagram"><img src="/../images/instagramlogo.png" alt="INSTAGRAM" class="instagramLogo"></div>
+
+            <br>
+            <h3 class="statement">Sign up to see photos and videos from your friends.</h3>
+            <div class="msg">{{msg}}</div>
+            <div class="signupContainer">
+                <form action="/api/signup" method="POST">
+                <input type="text" placeholder="Username" name="username" class="inputField"><br>
+                <input type="text" placeholder="Password" name="password" class="inputField"><br>
+                <button type="submit" class="signupButton"> Sign up </button>
+            </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

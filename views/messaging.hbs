@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>meta}}
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Messaging</h1>
+
+    <div class="userdetails">
+        <input type="hidden" value="{{username}}" id="{{id}}" class="username">
+        <button class="EnterChatbtn">Enter Chat</button><br>
+    </div>
+
+    <div class="onlineUsers">
+        
+    </div>
+
+    <div class="chatbox">
+        <input type="text" id="msg">
+        <button class="sendbtn">Send</button>
+
+        <ul class="msgList">
+
+        </ul>
+    </div>
+
+
+    <script src="../js/messaging.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>meta}}
+    <link rel="stylesheet" href="/../styles/addpost.css">
+</head>
+<body>
+    <div class="outerMostContainer">
+        {{>navbar}}
+        <div class="innerContainer rightPart">
+            <div class="container">
+                <form action="/api/posts" method="POST">
+                    <div class="addPostContainer">
+                        <div class="labels">
+                            <label for="title">Title:</label> <br> <br>
+                            <label for="imageurl">ImageUrl:</label> <br> <br>
+                            <label for="description">Description:</label>
+                        </div>
+
+                        <div class="inputFields">
+                            <input class="inputField" type="text" id="title" name="title" placeholder="Title"><br>
+                            <input class="inputField" type="text" id="imageurl" name="imageurl"
+                                placeholder="Imageurl"><br>
+                            <input class="inputField" type="text" id="description" name="description"
+                                placeholder="Description"><br>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="addPostButton">Add post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

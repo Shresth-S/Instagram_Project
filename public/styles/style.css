@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navBar{
+    border: .8px solid lightgray;
+    height: 99.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.outerMostContainer{
+    position: absolute;
+}
+
+.rightPart{
+    position: relative;
+    left: 150px;
+    height: 99vh;
+}
+
+.navLi {
+    list-style: none;
+    margin: 0px 0px 35px 5px;
+    text-align: center;
+    width: 210px;
+}
+
+
+.instagramLogo{
+    margin-top: 50px;
+    margin: 45px 0px 35px 15px;
+    width: 115px;
+}
+
+.instagram{
+    margin-top: 40px;
+    text-align: center;
+}
+
+.navItem{
+    font-size: 17px;
+    color: black;
+    /* color: white; */
+    margin: -3px 105px 10px 0px;
+    text-align: center;
+    display: block;
+}
+
+.navItem:link{
+    text-decoration: none;
+}
+
+.navItem:visited{
+    text-decoration: none;
+}
+
+.navItem:hover .navIconImages{
+    border: .1px solid lightgray;
+    border-radius: 5px;
+}
+
+.navIconImages{
+    margin-top: 2px;
+    width: 25px;
+    margin-right: 5px;
+}
+
+.logoutImage{
+    width: 20px;
+}
+
+.profileButton{
+    padding: 1px 7px;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.profileLink{
+    font-size: 15px;
+    margin-right: 0px;
+    color: black;
+    /* color: white; */
+    text-decoration: none;
+}
+
+

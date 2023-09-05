@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>meta}}
+    <link rel="stylesheet" href="/../styles/explore.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div class="outerMostContainer">
+        {{>navbar}}  
+        <div class="container rightPart">
+            {{!-- <button class="btn">Click me</button> --}}
+            <ul class="postList">
+                {{#each posts as |post| }}
+                    <li class="post" id="{{post._id}}">
+                        {{!-- <div>{{post.title}}</div> --}}
+                        <img class="imageurl postImage" src="{{post.imageurl}}"> <br>
+                        <div class="likesAndInfo">
+                            ❤️<button class="likes" id="{{post._id}}">{{post.likes}}</button>
+                            <a class="commentButton" href="/api/posts?id={{post._id}}">💬{{post.comments.length}} </a>
+                            <a class="infoButton" href="/api/posts?id={{post._id}}"> ℹ️ </a>                        
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+  
+    {{!-- <script src="../js/explore.js"></script> --}}
+    <script src="../js/explore2.js"></script>
+    <script src="../js/posts.js"></script>
+</body>
+</html>

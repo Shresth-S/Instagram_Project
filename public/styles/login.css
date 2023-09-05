@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto",sans-serif;
+    /* height: 100%; */
+    /* overflow-y: hidden; */
+}
+
+.backgroundImage{
+    height: 580px;
+    width: 381px;
+    position: absolute;
+    left: 378px;
+    top: 32px;
+    visibility: visible;
+}
+
+.OuterMostcontainer{
+    display: flex;
+}
+
+.images{
+    height: 580px;
+    width: 381px;
+    visibility: hidden;
+}
+
+.active{
+    position: absolute;
+    left: 378px;
+    top: 32px;
+    visibility: visible;
+}
+
+.outerFormContainer{
+    margin-right: 420px;
+}
+
+.formContainer{
+    margin: 44px 1px 0px 0px;
+    border: .8px solid lightgray;
+}
+
+.instagramLogo{
+    width: 250px;
+    margin: 50px 20px 10px 20px;
+}
+
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin: 20px auto;
+}
+
+.signupContainer{
+    /* border: 1px solid black; */
+    margin: 47px 15px 100px 30px;
+}
+
+.inputField{
+    border-radius: 5px;
+    padding: 7px 85px 7px 20px;
+    margin: 5px 2px 1px 2px;
+    border: .8px solid lightgray;
+    outline-width: 0;
+}
+
+.msg{
+    text-align: center;
+}
+
+.loginButton{
+    cursor: pointer;
+    margin: 10px 2px;
+    background-color: #3897f0;
+    border: 1px solid #3897f0;
+    border-radius: 7px;
+    padding: 7px 116px;
+    color: #fff;
+}
+
+.signupLink{
+    color: #3897f0;
+    text-decoration: none;
+}
+
+@media(min-width:1290px) and (max-width:1480px){
+    .active,.backgroundImage{
+        position: absolute;
+        left: 300px;
+        top: 32px;
+        visibility: visible;
+    }
+    /* .formContainer{
+        margin: 35px 200px 0px 0px;
+    } */
+    .outerFormContainer{
+        margin: 0px 300px 0px 0px;
+    }
+}
+
+@media(min-width:1096px) and (max-width:1290px){
+    .active,.backgroundImage{
+        position: absolute;
+        left: 200px;
+        top: 32px;
+        visibility: visible;
+    }
+    /* .formContainer{
+        margin: 35px 200px 0px 0px;
+    } */
+    .outerFormContainer{
+        margin: 0px 200px 0px 0px;
+    }
+}
+
+@media(min-width:880px) and (max-width:1096px){
+    .active,.backgroundImage{
+        position: absolute;
+        left: 100px;
+        top: 32px;
+        visibility: visible;
+    }
+    /* .formContainer{
+        margin: 35px 50px 0px 0px;
+    } */
+    .outerFormContainer{
+        margin: 0px 100px 0px 0px;
+    }
+}
+
+@media(min-width:500px) and (max-width:880px){
+    .imageContainer{
+        display: none;
+    }
+    .outerFormContainer{
+        margin: auto;
+    }
+}
+
+
+@media(max-width:500px){
+    .imageContainer{
+        display: none;
+    }
+    .outerFormContainer{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .signupContainer{
+        margin: 5px auto;
+    }
+    
+}

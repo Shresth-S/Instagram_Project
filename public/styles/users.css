@@ -1,0 +1,85 @@
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+.outerMostContainer{
+    display: flex;
+    width: 95%;
+}
+
+.rightPart{
+    /* margin: 15px 37px 0px 90px; */
+    /* width: 95%; */
+    width: 80%;
+    margin: 0px auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    min-height: 99%;
+    height: auto;
+}
+
+/* .usersList{
+    width: 80%;
+    margin: 0px auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    min-height: 99%;
+} */
+
+.user{
+    width: 95%;
+    margin: 5px auto;
+    list-style: none;
+    border: .2px solid lightgray;
+    border-radius: 7px;
+}
+
+.buttons{
+    display: flex;
+}
+
+.userDetails{
+    margin: 4px 3px 0px 5px
+}
+
+.followButton,.unfollowButton{
+    border-radius: 10px;
+    padding: 0px 5px;
+    cursor: pointer;
+    margin: 10px 3px 10px 4px;
+    background-color: #3897f0;
+    border: 1px solid #3897f0;
+    border-radius: 7px;
+    padding: 7px 25px;
+    color: #fff;
+}
+
+
+.privateAccountbtn,.publicAccountbtn{
+    width: 120px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 3px 10px 4px;
+    background-color: #3897f0;
+    border: 1px solid #3897f0;
+    border-radius: 7px;
+    padding: 7px 0px;
+    padding-left: 8px;
+}
+
+.privateAccountlink,.publicAccountlink{
+    color: #fff;
+    text-decoration: none;
+}
+
+.accountSettings{
+    display: flex;
+}
+
+.msg{
+    text-align: center;
+}
+
+.msgtext{
+    color: rgb(170, 169, 169);
+}

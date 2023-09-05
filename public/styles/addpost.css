@@ -1,0 +1,56 @@
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+.outerMostContainer{
+    display: flex;
+    width: 99%;
+}
+
+.innerContainer{
+    border: .8px solid lightgray;
+    width: 80%;
+    margin: 0px 5px;
+    border-radius: 7px;
+    margin-left: 150px;
+}
+
+
+
+.container{
+    border: 1px solid black;
+    /* margin: 15px 37px 0px 90px; */
+    height: 60vh;
+    width: 50vh;
+    margin: auto ;
+    /* margin-right: 570px;
+    margin-top: 50px; */
+}
+
+.rightPart{
+    width: 75%;
+}
+
+
+.addPostContainer{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px auto;
+    height: 70%;
+}
+
+.inputField{
+    margin: 1px 0px 15.2px 0px;
+}
+
+
+.addPostButton{
+    cursor: pointer;
+    margin: 10px 2px 10px 45px;
+    background-color: #3897f0;
+    border: 1px solid #3897f0;
+    border-radius: 7px;
+    padding: 7px 102px;
+    color: #fff;
+}

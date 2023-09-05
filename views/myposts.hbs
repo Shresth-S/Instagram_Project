@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>meta}}
+    <link rel="stylesheet" href="/../styles/myposts.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <div class="outerMostContainer">
+        {{>navbar}}
+        <div class="container rightPart">
+            <ul class="postList">
+                {{#each posts as |post| }}
+                <li class="post">
+                    <div class="title"> {{post.title}} </div>
+                    <img class="imageurl postImage" src="{{post.imageurl}}"> <br>
+                    <div class="description">{{post.description}} </div>
+                    <div class="flex1">
+                        <form method="POST" action="/api/posts?_method=DELETE" class="form">
+                            <input type="hidden" name="id" value="{{post._id}}">
+                            <button type="submit" class="deleteButton">🗑️</button>
+                        </form>
+
+                        <div class="likesAndInfo">
+                            ❤️<button class="likes" id="{{post._id}}">{{post.likes}}</button>
+                            <a class="commentButton" href="/api/posts?id={{post._id}}">💬{{post.comments.length}} </a>
+
+                            <a class="infoButton" href="/api/posts?id={{post._id}}"> ℹ️ </a>
+                        </div>
+                    </div>
+                </li>
+                <br>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="../js/posts.js"></script>
+
+</body>
+
+</html>
+
+
+
+{{!-- <form action="/api/like" method="POST">
+    <input type="hidden" name="id" value="{{post._id}}">
+    <button type="submit">❤️{{post.likes}}</button>
+</form> --}}

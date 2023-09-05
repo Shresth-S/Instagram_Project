@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>meta}}
+    <link rel="stylesheet" href="/../styles/homepage.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <div class="outerMostContainer">
+        {{>navbar}}
+        <br><br>
+        <div class="container rightPart">
+            <ul class="postList">
+                {{#each allPosts as |post| }}
+                    <li class="post" id="{{post._id}}">
+                        <div class="postTitle">{{post.title}}</div>
+                        <img class="imageurl postImage" src="{{post.imageurl}}"> <br>
+                        
+                        <div class="likesAndInfo">
+                            ❤️<button class="likes" id="{{post._id}}">{{post.likes}}</button>
+                            {{!-- ❤️<span class="likesCount" >{{post.likes}}</span> --}}
+
+                            <a class="commentButton" href="/api/posts?id={{post._id}}">💬{{post.comments.length}} </a>
+
+                            <a class="infoButton" href="/api/posts?id={{post._id}}"> ℹ️ </a>
+                        
+                        </div>
+                        <div class="description">
+                            {{post.description}}
+                        </div>
+                    </li>
+                {{/each}}
+
+                <div class="caughtUp">
+                    <img class="caughtUpImage" src="../images/caughtUp3.png">
+                    <h3>You're all caught up</h3>
+                    <div class="caughtUpmsg2"><small>You've seen all new posts from the past days</small></div><br>
+                    <h5 class="caughtUpmsg3"><b>View other posts</b></h5>
+                </div>
+            </ul>
+
+            <div class="otherUsers">
+                <div class="usersHeading">Suggested for you</div>
+                {{#each users as |user| }}
+                    <li class="user">
+                        <div class="userDetails">
+                            <div class="Username"> <strong> {{user.username}} </strong></div>
+
+                            <span class="details">followers: <b>{{user.followers}} </b> </span>
+                            <span class="details">following: <b>{{user.following}} </b> </span>
+                            <span class="details">posts: <b> {{user.postCount}} </b></span>
+                        </div>
+                    </li>
+                {{/each}}
+
+                <div class="helpLinks">
+                    <a href="/api/helplink" class="helplink">.About</a>
+                    <a href="/api/helplink" class="helplink">.Help</a>
+                    <a href="/api/helplink" class="helplink">.Press</a>
+                    <a href="/api/helplink" class="helplink">.API</a>
+                    <a href="/api/helplink" class="helplink">.Jobs</a>
+                    <a href="/api/helplink" class="helplink">.Privacy</a>
+                    <a href="/api/helplink" class="helplink">.Terms</a>
+                    <a href="/api/helplink" class="helplink">.Locations</a>
+                    <a href="/api/helplink" class="helplink">.Language</a>
+                    <a href="/api/helplink" class="helplink">.Meta Verified</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/posts.js"></script>
+    <script src="../js/homepage.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+body{
+    font-family: 'Roboto',sans-serif;
+}
+
+.outerMostContainer{
+    display: flex;
+    width: 99%;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rightPart{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0px 37px 0px 200px;
+    width: 72%;
+    padding: 5px;
+    height: auto;
+}
+
+.postList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+li{
+    list-style: none;
+}
+
+.post{
+    border: 0.5px solid lightgray;
+    margin: 0px 1.5px;
+    margin-bottom: 3px;
+    width: 356px;
+    height: 350px;
+}
+
+.postImage{
+    height: 281px;
+    width: 356px;
+}
+
+.flex1{
+    display: flex;
+}
+
+.form{
+    margin: 2px 2px 2px 2px;
+}
+
+.deleteButton{
+    margin-right: 8px;
+    border: none;
+    background: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.likesAndInfo{
+    margin: 2px 0px 1px 2px;
+}
+
+.likes{
+    margin: 0px 4px 2px 0px;
+    margin-right: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.infoButton{
+    padding: 1px 4px;
+    text-decoration: none;
+}
+
+.commentButton{
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+}

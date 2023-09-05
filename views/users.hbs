@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>meta}}
+    <link rel="stylesheet" href="/../styles/users.css">
+</head>
+
+<body>
+    <div class="outerMostContainer">
+        {{>navbar}}
+        <div class="rightPart">
+            <ul class="usersList">
+                {{msg}}
+                {{#each users as |user| }}
+                <li class="user">
+                    <div class="userDetails">
+                        <div> <strong> {{user.username}} </strong></div>
+
+                        <span>Followers: <b>{{user.followers}} </b> </span>
+                        <span>Following: <b>{{user.following}} </b> </span>
+                        <span>Posts: <b> {{user.postCount}} </b></span>
+                    </div>
+
+                    
+                    <div class="buttons">
+                        <form action="/api/follow" method="POST">
+                            <input type="hidden" name="id" value="{{user._id}}">
+                            <button type="submit" class="followButton">Follow</button>
+                        </form>
+
+                        <form action="/api/unfollow" method="POST">
+                            <input type="hidden" name="id" value="{{user._id}}">
+                            <button type="submit" class="unfollowButton">Unfollow</button>
+                        </form>
+
+                    </div>
+                </li>
+                <br>
+                {{/each}}
+            </ul>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

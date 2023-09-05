@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/../styles/login.css">
+</head>
+<body>
+    <div class="OuterMostcontainer">
+        <div class="imageContainer">
+            <img src="/../images/img1.png" alt="instagram" class="backgroundImage">
+            <img src="/../images/img1.png" alt="instagram" class="images" class="active">
+            <img src="/../images/img2.png" alt="instagram" class="images">
+            <img src="/../images/img3.png" alt="instagram" class="images">
+            <img src="/../images/img4.png" alt="instagram" class="images">
+        </div>
+
+        <div class="outerFormContainer">
+            <div class="formContainer ">
+                <img src="/../images/instagramlogo.png" alt="INSTAGRAM" class="instagramLogo">
+                <div class="msg">
+                    <h4>{{msg}}</h4> <br>
+                </div>
+                <div class="loginContainer">
+                    <form action="/api/authenticate" method="POST">
+                        <input type="text" placeholder="Username" name="username" class="inputField"><br>
+                        <input type="text" placeholder="Password" name="password" class="inputField"><br>
+                        <button type="submit" class="loginButton"> Log in </button>
+                    </form>
+                </div>
+                <div class="signupContainer">
+                    <div>
+                        Don't have an account? <span><a href="/api/signup" class="signupLink"><b>Sign up</b></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/login.js"></script>
+</body>
+
+</html>
+
+
+
+{{!-- <div class="form-container">
+    {{msg}} <br><br>
+
+    <form action="/api/authenticate" method="POST">
+        <input type="text" placeholder="username" name="username"><br>
+        <input type="text" placeholder="Password" name="password"><br>
+        <button type="submit">Login!</button>
+    </form>
+
+    <div>
+        New User? SignUp First!
+        <a href="/api/signup">Signup</a>
+    </div>
+</div>
+--}}
