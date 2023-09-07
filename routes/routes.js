@@ -192,12 +192,9 @@ router.post('/like', async (req, res, next) => {
 
 router.post('/addcomment', async (req, res) => {
     console.log("Yahan tak request to Aagyiiiiiiiiiiiiiiiiiiiiiiiii");
-    console.log("");
-    console.log("");
-    console.log("");
     const { id, comment } = req.body;
     console.log(id);
-    console.log(comment);
+    console.log("comment added",comment);
     let post = await Posts.findOne({ _id: id });
     console.log(post.comments);
     // res.send("hello");

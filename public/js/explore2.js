@@ -47,11 +47,11 @@ $(() => {
         // console.log("scroll event occured");
         // lastKnownScrollPosition = window.scrollY;
         // console.log(lastKnownScrollPosition);
-        if($(window).scrollTop() + $(window).height() > $(document).height()-20) {
+        if($(window).scrollTop() + $(window).height() > $(document).height()-200) {
             console.log("bottom aagya to aur posts laa rha hu");
             let x = (6 * clickCnt) + 3;
             clickCnt++;
-            $.get(`/api/explore_posts?limit=6&offset=${x}`)
+            $.get(`/api/explore_posts?limit=7&offset=${x}`)
                 .done((posts) => {
                     // console.log("ok", posts[0]);
                     // console.log("length",posts.length);

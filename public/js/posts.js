@@ -1,6 +1,19 @@
 $(() => {
     let postList = $('.postList');
 
+    function throttle(f, delay) {
+        let callHuaPadaHai = false;
+        return (...args) => {
+            if (!callHuaPadaHai) {
+                callHuaPadaHai = true;
+                f(...args);
+                setTimeout(() => {
+                    callHuaPadaHai = false;
+                },delay)
+            }
+        }
+    }
+
     function showComments(newComments) {
         // console.log("showComments called");
         // console.log(newComments);
@@ -16,15 +29,15 @@ $(() => {
         
     }
 
-    postList.on("click", (ev) => { 
+    function clickHandler(ev) {
+        console.log("clicked");
         // console.log("PostList",postList);
         let attr = ev.target.getAttribute("class");
         let id = ev.target.getAttribute("id");
         console.log("id",id);
         let likesCount = ev.target;
-
-        console.log("Target ",ev.target)
-
+        console.log("Target ", ev.target)
+        console.log("Mujhpe request aayi");
         if (attr == 'likes') {
             $.post('/api/like', { id })
                 .done((likes) => {
@@ -38,10 +51,11 @@ $(() => {
         if (attr == 'addCommentButton') {
             let comment = $('.comment');
             let commentCount = $('.commentCount');
-            console.log(comment.val());
+            // console.log(comment.val());
             let cmt = comment.val();
             comment.val('');
-            $.post('/api/addcomment',
+            if (cmt != "") {
+                $.post('/api/addcomment',
                 {
                     id,comment:cmt
                 })
@@ -50,9 +64,13 @@ $(() => {
                 })
                 .fail((err) => {
                     alert("Failed to comment on post");
-                })
+                })                
+            }
+
         }
-    })
+    }
+
+    postList.on("click", throttle(clickHandler, 4000));
 })
 
 

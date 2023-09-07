@@ -24,7 +24,7 @@ $(() => {
     }
 
     $( window ).on("scrollend", () => {
-        if($(window).scrollTop() + $(window).height() > $(document).height()-20) {
+        if($(window).scrollTop() + $(window).height() > $(document).height()-80) {
             console.log("bottom aagya to aur posts laa rha hu");
             let x = 6 * fetchCnt;
             fetchCnt++;
