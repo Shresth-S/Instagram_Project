@@ -4,9 +4,9 @@ const app = express();
 const PORT = 4444;
 const hbs = require('hbs');
 const mongoose = require('mongoose'); 
-const Router = require('../routes/routes');
+const Router = require('./routes/routes');
 const session = require('express-session');
-const passport = require('../auth/passport');
+const passport = require('./auth/passport');
 const MongoStore = require('connect-mongo');
 
 // let MongoDBStore = require('connect-mongodb-session')(session);
