@@ -25,6 +25,54 @@ body{
     justify-content: space-evenly;
 }
 
+
+.postList{
+    display: flex;
+    flex-direction: column;
+}
+
+li{
+    list-style: none;
+}
+
+.post{
+    height: 600px;
+    width: 450px;
+    /* margin-left: 370px; */
+    margin-bottom: 15px;
+    border-bottom: .7px solid lightgray;
+}
+
+.postImage{
+    height: 500px;
+    width: 450px;
+    /* max-height: 400px; */
+}
+
+.likesAndInfo{
+    margin: 4px 0px 10px 2px;
+}
+
+.likes{
+    margin: 0px 4px 2px 0px;
+    margin-right: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.infoButton{
+    padding: 1px 4px;
+    text-decoration: none;
+}
+
+.commentButton{
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
 .otherUsers{
     margin-top: 50px;
 }
@@ -69,55 +117,6 @@ body{
     text-decoration: underline;
 }
 
-.postList{
-    display: flex;
-    flex-direction: column;
-}
-
-li{
-    list-style: none;
-}
-
-.post{
-
-    height: 600px;
-    width: 450px;
-    /* margin-left: 370px; */
-    margin-bottom: 15px;
-    border-bottom: .7px solid lightgray;
-}
-
-.postImage{
-    height: 500px;
-    width: 450px;
-    /* max-height: 400px; */
-}
-
-.likesAndInfo{
-    margin: 4px 0px 10px 2px;
-}
-
-
-.likes{
-    margin: 0px 4px 2px 0px;
-    margin-right: 10px;
-    border: none;
-    background: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-
-.infoButton{
-    padding: 1px 4px;
-    text-decoration: none;
-}
-
-.commentButton{
-    color: black;
-    text-decoration: none;
-    margin-right: 10px;
-}
 
 .caughtUp{
     text-align: center;
@@ -136,4 +135,77 @@ li{
 
 .caughtUpmsg3{
     color: #3897f0;
+}
+
+
+@media(min-width:640px) and (max-width:860px){
+    .navBar{
+        border-bottom: 0cm;
+    }
+    .navIconText{
+        display: none;
+    }
+    .navItem{
+        margin: -3px 5px 10px 0px;
+    }
+    .navLi {
+        width: 100px;
+    }
+    .instagramLogo{
+        margin-top: 50px;
+        margin: 45px 7px 35px 7px;
+        width: 100px;
+    }
+    .post{
+        height: 400px;
+        width: 300px;
+        margin-bottom: 15px;
+        border-bottom: .7px solid lightgray;
+    }
+    .postImage{
+        height: 315px;
+        width: 280px;
+    }
+    .rightPart{
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        margin: 0px 10px 0px 5px;
+        width: 82.5%;
+        padding: 5px;
+        height: auto;
+        min-height: 740px;
+    }
+}
+
+@media(min-width:400px) and (max-width:640px){
+    .navBar{
+        border-bottom: 0cm;
+    }
+    .navIconText{
+        display: none;
+    }
+    .navItem{
+        margin: -3px 5px 10px 0px;
+    }
+    .navLi {
+        width: 100px;
+    }
+    .instagramLogo{
+        margin-top: 50px;
+        margin: 45px 7px 35px 7px;
+        width: 60px;
+    }
+    .post{
+        height: 400px;
+        width: 300px;
+        margin-bottom: 15px;
+        border-bottom: .7px solid lightgray;
+    }
+    .postImage{
+        height: 315px;
+        width: 280px;
+    }
+    .otherUsers{
+        display: none;
+    }
 }

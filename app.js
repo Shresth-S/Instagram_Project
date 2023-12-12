@@ -64,7 +64,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 // mongoose.connect('mongodb://127.0.0.1:27017/instadb')
 //         .then(()=>{
-//             server.listen(PORT,()=>{
+//             app.listen(PORT,()=>{
 //                 console.log(`http://localhost:`+PORT);
 //             })
 //         })
