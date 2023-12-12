@@ -304,7 +304,11 @@ router.get('/home', async (req, res) => {
             let posts = user.posts;
             finalposts = [...posts,...finalposts];
         }
-
+        if (finalposts.length == 0) {
+            let limit = 2, offset = 8;
+            let posts = await Posts.find({ public: true }).skip(offset).limit(limit); 
+            finalposts = [...posts, ...finalposts];
+        }
         let users = await Users.find({ _id: { $nin: [req.user._id] } }).limit(5);
         res.render('homepage', {
             allPosts: finalposts,
@@ -333,14 +337,14 @@ router.get('/explore', async (req, res) => {
     })
 })
 
-router.get('/message', (req, res) => {
-    console.log(req.user.username);
-    console.log("Hello bhailogggggggg");
-    res.render('messaging', {
-        username: req.user.username,
-        id:req.user._id
-    });
-})
+// router.get('/message', (req, res) => {
+//     console.log(req.user.username);
+//     console.log("Hello bhailogggggggg");
+//     res.render('messaging', {
+//         username: req.user.username,
+//         id:req.user._id
+//     });
+// })
 
 router.get('/explore_posts', async (req, res) => {
     try {
