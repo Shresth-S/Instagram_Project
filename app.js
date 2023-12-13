@@ -37,7 +37,8 @@ app.use(passport.session());
 app.use('/api', Router);
 
 app.get('/', (req, res) => {
-    console.log("req.user: ",req.user);
+    console.log("req.user: ", req.user);
+    console.log("hello");
     res.render('login');
 });
 
